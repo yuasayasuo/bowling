@@ -18,7 +18,9 @@ class Bowling
             @total += @score_array[index]
             
             # 1投前と2投前の合計が10の場合、スペアボーナスを加算する。
-            if (index > 1) && (@score_array[index - 1] + @score_array[index - 2] == 10) && index.even?
+            # 但し、最終フレームについてはボーナスを加算しない。
+            if (index > 1)  && (index < 20) && index.even? &&
+               (@score_array[index - 1] + @score_array[index - 2] == 10)
                 @total += @score_array[index]
             end
             
