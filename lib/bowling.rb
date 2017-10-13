@@ -4,7 +4,6 @@ class Bowling
     def initialize
         @total = 0        # 合計スコア
         @score_array = [] # スコアの配列
-        @count = 0        # 投げた数
     end
     
     # スコアを加算する。
